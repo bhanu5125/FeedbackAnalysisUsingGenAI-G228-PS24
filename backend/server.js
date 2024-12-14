@@ -5,8 +5,8 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
 // MongoDB Connection String
-const mongoURI = 'mongodb+srv://gokulkashyap:qgy1HvKP6czfbP5M@cluster0.y4zcu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-
+//const mongoURI = 'mongodb+srv://gokulkashyap:qgy1HvKP6czfbP5M@cluster0.y4zcu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = 'mongodb://localhost:27017/feedback-analysis';
 // Models
 const User = require('./models/User'); 
 

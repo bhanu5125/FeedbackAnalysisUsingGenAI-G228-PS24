@@ -1,4 +1,4 @@
-#flipkart webscrap 
+# flipkart webscrap
 from flask import Flask, request, jsonify
 import torch
 import torch.nn as nn
