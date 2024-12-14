@@ -7,11 +7,6 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '../.env' });
 
 
-<<<<<<< HEAD
-// MongoDB Connection String
-//const mongoURI = 'mongodb+srv://gokulkashyap:qgy1HvKP6czfbP5M@cluster0.y4zcu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-const mongoURI = 'mongodb://localhost:27017/feedback-analysis';
-=======
 
 >>>>>>> 27a739fc671824d67a36a52f290999a3a3e8a818
 // Models
