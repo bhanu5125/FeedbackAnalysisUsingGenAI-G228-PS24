@@ -29,9 +29,27 @@ CORS(app)
 warnings.filterwarnings("ignore", category=ResourceWarning)
 
 # MongoDB Connection
-mongo_client = pymongo.MongoClient("mongodb+srv://ansh:kwakjichang@cluster0.ohufy.mongodb.net/Recommendationsystem")
-db = mongo_client["Feedback_Analysis"]
-search_history = db["searchhistories"]
+try:
+    # Connect to MongoDB Atlas
+    mongo_client = pymongo.MongoClient(
+        "mongodb+srv://ansh:kwakjichang@cluster0.ohufy.mongodb.net/Recommendationsystem?retryWrites=true&w=majority"
+    )
+    
+    # Check if connection is successful
+    mongo_client.server_info()  # This will trigger an exception if connection fails
+    
+    # Access database and collection
+    db = mongo_client["Feedback_Analysis"]
+    search_history = db["searchhistories"]
+    
+    print("✅ Successfully connected to MongoDB Atlas!")
+    
+except pymongo.errors.ServerSelectionTimeoutError as err:
+    print("❌ Could not connect to MongoDB Atlas:", err)
+except pymongo.errors.OperationFailure as err:
+    print("❌ Authentication failed:", err)
+except Exception as err:
+    print("❌ An unexpected error occurred:", err)
 
 nlp = spacy.load("en_core_web_sm")
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
