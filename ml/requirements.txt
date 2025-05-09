@@ -11,5 +11,5 @@ numpy
 scikit-learn
 requests
 python-dotenv
-
+gunicorn
 # Run after pip install: python -m spacy download en_core_web_sm
