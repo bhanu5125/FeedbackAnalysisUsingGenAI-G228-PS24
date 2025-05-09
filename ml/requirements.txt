@@ -12,4 +12,5 @@ scikit-learn
 requests
 python-dotenv
 gunicorn
+pymongo
 # Run after pip install: python -m spacy download en_core_web_sm
