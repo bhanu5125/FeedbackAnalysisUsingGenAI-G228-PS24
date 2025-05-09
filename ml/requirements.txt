@@ -13,4 +13,5 @@ requests
 python-dotenv
 gunicorn
 pymongo
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
 # Run after pip install: python -m spacy download en_core_web_sm
