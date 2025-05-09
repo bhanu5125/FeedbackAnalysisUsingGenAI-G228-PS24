@@ -23,7 +23,6 @@ import os
 from datetime import datetime, timedelta
 import pymongo
 
-load_dotenv()
 app = Flask(__name__)
 CORS(app)
 warnings.filterwarnings("ignore", category=ResourceWarning)
