@@ -29,7 +29,7 @@ CORS(app)
 warnings.filterwarnings("ignore", category=ResourceWarning)
 
 # MongoDB Connection
-mongo_client = pymongo.MongoClient("mongodb://localhost:27017/")
+mongo_client = pymongo.MongoClient("mongodb+srv://ansh:kwakjichang@cluster0.ohufy.mongodb.net/Recommendationsystem")
 db = mongo_client["Feedback_Analysis"]
 search_history = db["searchhistories"]
 
